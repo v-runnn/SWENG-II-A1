@@ -2,7 +2,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy
 
-class employer(db.Model):
+class Employer(db.Model):
     __tablename__ = 'employers'
 
     employerID = db.Column(sb.String, primary_key=True)

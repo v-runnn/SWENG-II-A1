@@ -3,7 +3,7 @@ from datetime import datetime
 
 db=SQLAlchemy()
 
-class applicant(db.Model):
+class Applicant(db.Model):
     __tablename__ = 'applicants'
 
     applicantID = db.Column(db.String, primary_key = true)
