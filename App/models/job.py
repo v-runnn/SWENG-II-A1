@@ -13,7 +13,5 @@ class Job(db.Model):
 
     employerID = db.Column(db.String, db.ForeignKey('employers.employerID'), nullable=False)
 
-    applications = db.relationship('Application', backref='job', lazy=True)
-
     def __repr__(self):
         return f'<Job {self.title} at {self.company}>'

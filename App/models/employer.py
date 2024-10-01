@@ -1,15 +1,15 @@
 from flask_sqlalchemy import SQLAlchemy
+from App.models.application import Application
+from App.models.job import Job
 
-db = SQLAlchemy
+db = SQLAlchemy()
 
 class Employer(db.Model):
     __tablename__ = 'employers'
 
-    employerID = db.Column(sb.String, primary_key=True)
+    employerID = db.Column(db.String, primary_key=True)
     name = db.Column(db.String, nullable=False)
     company = db.Column(db.String, nullable=False)
-
-    jobs = db.relationship('Job', backref='employer', lazy=True)
 
     def __init__(self, employerID, name,  company):
         self.employerID = employerID,
@@ -17,7 +17,7 @@ class Employer(db.Model):
         self.company = company
 
     def create_job(self, title, description, requirements):
-        from models.job import Job
+
         job = Job(
             title=title,
             description=description,
@@ -30,7 +30,7 @@ class Employer(db.Model):
         return job
 
     def view_applicants(self, jobID):
-        from models.applications import Application
+
         return Application.query.filter_by(jobID=jobID).all()
 
     def __repr__ (self):

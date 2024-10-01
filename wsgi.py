@@ -4,6 +4,7 @@ from flask.cli import with_appcontext, AppGroup
 
 from App.controllers.Application import view_applications_by_job, view_applications_by_applicant
 from App.controllers.applicant import view_applicants, view_applicant, create_applicant
+from App.controllers.employer import create_employer
 from App.controllers.job import view_jobs, view_job, create_job
 from App.database import db, get_migrate
 from App.models import User
@@ -106,3 +107,7 @@ def view_jb():
 @app.cli.command("create_job", help="Views all the applicants for jobs")
 def create_jb():
     create_job()
+
+@app.cli.command("create_employer", help="Creates an employer")
+def create_emp():
+    create_employer()

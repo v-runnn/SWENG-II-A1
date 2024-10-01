@@ -23,7 +23,7 @@ def apply_to_job():
     applicantID = input("Enter your applicant ID: ")
     jobID = input("Enter the job ID of the Job you wish to apply for: ")
     applicant = Applicant.query.get(applicantID)
-    job = job.query.get(jobID)
+    job = Job.query.get(jobID)
 
     if applicant and job:
         applicant.apply_to_job(job)
