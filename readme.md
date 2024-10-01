@@ -1,4 +1,18 @@
+
+<br>@app.cli.command("create_employer", help="Creates an employer")</br>
+<br>@app.cli.command("create_job", help="Views all the applicants for jobs")</br>
+<br>@app.cli.command("view_job", help="Views a job")</br>
+<br>@app.cli.command("view_jobs", help="Views all the jobs")</br>
+<br>@app.cli.command("create_applicant", help="Creates applicants")</br>
+<br>@app.cli.command("apply_to_job", help="Allows a user to apply for jobs")</br>
+<br>@app.cli.command("view_applcant", help="Views an applicant in the system")</br>
+<br>@app.cli.command("view_applcants", help="Views all the applicants for jobs")</br>
+<br>@app.cli.command("view_applications_by_applicant", help="Views the applications for a particular applicant")</br>
+<br>@app.cli.command("view_applications_by_job", help="Views the applications for a particular job"</br>
+
+
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/uwidcit/flaskmvc)
+
 <a href="https://render.com/deploy?repo=https://github.com/uwidcit/flaskmvc">
   <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
 </a>
