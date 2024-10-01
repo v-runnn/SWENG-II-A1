@@ -29,4 +29,4 @@ class Applicant(db.Model):
         return application
 
     def __repr__(self):
-        return f'<Applicant {self.name}>'
+        return f'<Applicant {self.name}> '
