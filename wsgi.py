@@ -91,7 +91,7 @@ def view_appl():
 def apply_to_job():
     apply_to_job()
 
-@app.cli.command("create_appl", help="Creates applicants")
+@app.cli.command("create_applicant", help="Creates applicants")
 def create_appl():
     create_applicant()
 
