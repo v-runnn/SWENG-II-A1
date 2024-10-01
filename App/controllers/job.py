@@ -36,16 +36,3 @@ def create_job():
     db.session.commit()
 
     print(f'Job {title} created successfully')
-
-def view_job_applicants():
-    jobID = input('Enter the JobID: ')
-    job = Job.query.get(jobID)
-    if job:
-        applications = job.applications
-        if not applications:
-            print(f'No applicants for job {job.title}')
-        else:
-            for app in applications:
-                print(f"Applicant ID: {app.applicantID}, Application ID: {app.applicationID}")
-    else:
-        print('Job not found.')
