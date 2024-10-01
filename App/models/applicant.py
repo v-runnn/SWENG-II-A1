@@ -6,7 +6,7 @@ db=SQLAlchemy()
 class Applicant(db.Model):
     __tablename__ = 'applicants'
 
-    applicantID = db.Column(db.String, primary_key = true)
+    applicantID = db.Column(db.String, primary_key = True)
     name = db.Column(db.String, nullable = False)
     resume = db.Column(db.String, nullable = False)
 
