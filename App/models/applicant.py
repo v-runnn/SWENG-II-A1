@@ -1,5 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from App.models.application import Application
 
 db=SQLAlchemy()
 
@@ -15,9 +16,8 @@ class Applicant(db.Model):
         self.name = name
         self.resume = resume
 
-#This method allows applicants to create job applications
+    #This method allows applicants to create job applications
     def applyToJob(self, job):
-        from models.applcation import Application
         application = Application(
             status = True,
             dateApplied = datetime.now(),
